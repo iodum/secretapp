@@ -1,0 +1,18 @@
+<h1>Colors</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Pantone value</th>
+    <th>Year</th>
+  </tr>
+  <tbody>
+    {{#each model as |color|}}
+      <tr>
+        <td>{{color.name}}</td>
+        <td>{{color.pantone_value}}</td>
+        <td>{{color.year}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

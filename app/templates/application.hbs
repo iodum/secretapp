@@ -1,5 +1,20 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
 
-{{outlet}}
+<nav class="navbar">
+  <div class="container">
+    <div class="navbar-header">
+      <h2><a href="/" target="_blank" class="header-logo">Secretapp</a></h2>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+        {{#if authManager.isAuthenticated}}
+          <li><a {{action 'logout'}}>Выход</a></li>
+        {{/if}}
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  {{outlet}}
+</div>
